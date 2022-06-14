@@ -7,10 +7,10 @@ public class resultVar : MonoBehaviour
 {
     public InputField SeeVar; // поле вывода на экран записи математической операции 
     public Text M; // поле вывода символа записи числа в переменную
-    public float a; // операнд 1
-    public float b; // операнд 2
-    public float d; // результат математической операции
-    public float m; // переменная хранения числа MR
+    public double a; // операнд 1
+    public double b; // операнд 2
+    public double d; // результат математической операции
+    public double m; // переменная хранения числа MR
     public string c; // переменная хранения математического оператора
     
     private void Update()

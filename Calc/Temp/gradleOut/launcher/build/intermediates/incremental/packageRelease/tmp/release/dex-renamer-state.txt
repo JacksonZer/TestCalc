@@ -1,0 +1,4 @@
+#Tue Jun 14 16:52:21 EEST 2022
+base.0=C\:\\Users\\Jackson\\Documents\\GitHub\\Calculator\\Calculator\\Temp\\gradleOut\\launcher\\build\\intermediates\\dex\\release\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

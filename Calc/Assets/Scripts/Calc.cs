@@ -29,12 +29,12 @@ public class Calc : MonoBehaviour, IPointerDownHandler
     }
     public void BMP() // функция работы с запоминаем чисел и операций над ней
     {   
-        rVar.m = rVar.m + float.Parse(InNumb.text);
+        rVar.m = rVar.m + double.Parse(InNumb.text);
     }
 
     public void BMM() // функция работы с запоминаем чисел и операций над ней
     {   
-        rVar.m = rVar.m - float.Parse(InNumb.text);
+        rVar.m = rVar.m - double.Parse(InNumb.text);
     }
 
     public void BMR() // функция работы с запоминаем чисел и операций над ней
@@ -53,7 +53,7 @@ public class Calc : MonoBehaviour, IPointerDownHandler
         
         if (rVar.a != 0)
         {
-            rVar.b = float.Parse(InNumb.text);
+            rVar.b = double.Parse(InNumb.text);
             result();
         }
         
@@ -75,7 +75,7 @@ public class Calc : MonoBehaviour, IPointerDownHandler
             
         else
         {
-            float VarOne = float.Parse(InNumb.text);
+            double VarOne = double.Parse(InNumb.text);
             VarOne *= -1;
             InNumb.text = VarOne.ToString();
         }
@@ -84,13 +84,13 @@ public class Calc : MonoBehaviour, IPointerDownHandler
     public void BSquare() // кнопка возведения в квадрат
     {
         
-        float VarOne = float.Parse(InNumb.text);
+        double VarOne = double.Parse(InNumb.text);
         VarOne *= VarOne;
         InNumb.text = VarOne.ToString();
-        rVar.d = float.Parse(InNumb.text);
+        rVar.d = double.Parse(InNumb.text);
         if (rVar.a != 0)
         {
-            rVar.b = float.Parse(InNumb.text);
+            rVar.b = double.Parse(InNumb.text);
             result();
         }
     }
@@ -98,13 +98,13 @@ public class Calc : MonoBehaviour, IPointerDownHandler
     public void B1Divide() // кнопка деления еденицы на число
     {
         
-        float VarOne = float.Parse(InNumb.text);
-        float VarTwo = 1/VarOne;
+        double VarOne = double.Parse(InNumb.text);
+        double VarTwo = 1/VarOne;
         InNumb.text = VarTwo.ToString();
-        rVar.d = float.Parse(InNumb.text);
+        rVar.d = double.Parse(InNumb.text);
         if (rVar.a != 0)
         {
-            rVar.b = float.Parse(InNumb.text);
+            rVar.b = double.Parse(InNumb.text);
             result();
         }
     }
@@ -113,12 +113,12 @@ public class Calc : MonoBehaviour, IPointerDownHandler
     {   
         
         float VarOne = float.Parse(InNumb.text);
-        float VarTwo = Mathf.Sqrt(VarOne);
+        double VarTwo = Mathf.Sqrt(VarOne);
         InNumb.text = VarTwo.ToString();
-        rVar.d = float.Parse(InNumb.text);
+        rVar.d = double.Parse(InNumb.text);
         if (rVar.a != 0)
         {
-            rVar.b = float.Parse(InNumb.text);
+            rVar.b = double.Parse(InNumb.text);
             result();
         }
     }
@@ -126,13 +126,13 @@ public class Calc : MonoBehaviour, IPointerDownHandler
     public void BPercent() // кнопка процентов
     {
         
-        float VarOne = float.Parse(InNumb.text);
+        double VarOne = double.Parse(InNumb.text);
         VarOne /= 100;
         InNumb.text = VarOne.ToString();
-        rVar.d = float.Parse(InNumb.text);
+        rVar.d = double.Parse(InNumb.text);
         if (rVar.a != 0)
         {
-            rVar.b = float.Parse(InNumb.text);
+            rVar.b = double.Parse(InNumb.text);
             result();
         }            
     }
@@ -155,7 +155,7 @@ public class Calc : MonoBehaviour, IPointerDownHandler
                 string strD = rVar.d.ToString();
                 int LenD = strD.Length;
                 strD = strD.Remove(LenD -1,1);
-                rVar.d = float.Parse(strD);
+                rVar.d = double.Parse(strD);
                 InNumb.text = rVar.d.ToString();
             }
         }
@@ -235,20 +235,20 @@ public class Calc : MonoBehaviour, IPointerDownHandler
         rVar.c = CalcButton;
         if (rVar.a == 0)
         {
-            rVar.a = float.Parse(InNumb.text);
+            rVar.a = double.Parse(InNumb.text);
             rVar.d = 0;
             InNumb.text = "";
         }
         
         else if(rVar.a != 0)
         {
-            rVar.b = float.Parse(InNumb.text);
+            rVar.b = double.Parse(InNumb.text);
             result();
         } 
         
         else
         {   
-            rVar.b = float.Parse(InNumb.text);          
+            rVar.b = double.Parse(InNumb.text);          
             result();
         }    
     }

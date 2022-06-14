@@ -7,7 +7,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
@@ -69,29 +68,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2232}
     - Class: 114
-      Script: {instanceID: 2650}
+      Script: {instanceID: 2648}
     - Class: 114
-      Script: {instanceID: 2814}
+      Script: {instanceID: 2812}
     - Class: 114
-      Script: {instanceID: 2860}
+      Script: {instanceID: 2858}
     - Class: 114
-      Script: {instanceID: 3032}
+      Script: {instanceID: 3030}
     - Class: 114
-      Script: {instanceID: 3088}
+      Script: {instanceID: 3086}
     - Class: 114
-      Script: {instanceID: 3276}
+      Script: {instanceID: 3274}
     - Class: 114
-      Script: {instanceID: 3398}
+      Script: {instanceID: 3396}
     - Class: 114
-      Script: {instanceID: 4578}
+      Script: {instanceID: 4576}
     - Class: 114
-      Script: {instanceID: 4732}
+      Script: {instanceID: 4730}
     - Class: 114
-      Script: {instanceID: 5112}
+      Script: {instanceID: 5110}
     - Class: 114
-      Script: {instanceID: 5132}
+      Script: {instanceID: 5130}
     - Class: 114
-      Script: {instanceID: 5728}
+      Script: {instanceID: 5726}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -837,7 +836,7 @@ ScriptsOnlyBuild:
     className: TMP_TextEventCheck
   - hash:
       serializedVersion: 2
-      Hash: 5bc5ba6f5d48476a98fcf0226b089768
+      Hash: bfb8b51b244383e25042f26a883ea957
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: resultVar
