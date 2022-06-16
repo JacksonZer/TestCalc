@@ -27,28 +27,28 @@ public class Calc : MonoBehaviour, IPointerDownHandler
             InNumb.text = rVar.d.ToString();                               
         }
     }
-    public void BMP() // функция работы с запоминаем чисел и операций над ней
+    public void ButtonMP() // прибавляет число на экране к пременной rVar.m(M - память калькулятора), по умолчанию 0, при нажатие кнопки М+
     {   
         rVar.m = rVar.m + double.Parse(InNumb.text);
     }
 
-    public void BMM() // функция работы с запоминаем чисел и операций над ней
+    public void ButtonMM() // вычитает число на экране от пременной rVar.m(M - память калькулятора), по умолчанию 0, при нажатие кнопки М-
     {   
         rVar.m = rVar.m - double.Parse(InNumb.text);
     }
 
-    public void BMR() // функция работы с запоминаем чисел и операций над ней
+    public void ButtonMR() // выводт число из переменной rVar.m (M - паиять калькулятора) на экран при нажатии на кнопку MR
     {   
         InNumb.text = rVar.m.ToString();
     }
 
-    public void BMC() // функция работы с запоминаем чисел и операций над ней
+    public void ButtonMC() // присваевает переменной rVar.m (М - память калькулятора) значение 0 (очещает память калькулятора) при нажатии на кнопку MC
     {   
         rVar.m *= 0;
     }
 
  
-    public void BQuals() //кнопка равно
+    public void ButtonRavno() //принажатии на кнопку равно (=)
     {   
         
         if (rVar.a != 0)
@@ -65,7 +65,7 @@ public class Calc : MonoBehaviour, IPointerDownHandler
     }    
     
        
-    public void BPlusMinus() // кнопка +-
+    public void ButtonPlusMinus() // при нажатии на кнопку плюс-минус(+/-). Меняет знак числа на противоположный
     {   
         if (rVar.d != 0)
         {       
@@ -81,7 +81,7 @@ public class Calc : MonoBehaviour, IPointerDownHandler
         }
     }
       
-    public void BSquare() // кнопка возведения в квадрат
+    public void ButtonVKvadrate() // при нажатии на кнопку возвести в квадрат (x^2). Возводит число на эекране в квадрат
     {
         
         double VarOne = double.Parse(InNumb.text);
@@ -95,7 +95,7 @@ public class Calc : MonoBehaviour, IPointerDownHandler
         }
     }
         
-    public void B1Divide() // кнопка деления еденицы на число
+    public void ButtonDel1NaX() // при нажатии на кнопку деление еденицы на число(1/x). Производить деление еденицы на число на экране
     {
         
         double VarOne = double.Parse(InNumb.text);
@@ -109,7 +109,7 @@ public class Calc : MonoBehaviour, IPointerDownHandler
         }
     }
         
-    public void BSquareRoot() // кнопка квадратного корня
+    public void ButtonKvadratKoren() // при нажатии на кнопку квадратного корня (√). вычесляет квадранный корень числа на экране
     {   
         
         float VarOne = float.Parse(InNumb.text);
@@ -123,7 +123,7 @@ public class Calc : MonoBehaviour, IPointerDownHandler
         }
     }
         
-    public void BPercent() // кнопка процентов
+    public void ButtonPercent() // при нажатии на кнопку процент(%). вычесляет процент из числа на экране
     {
         
         double VarOne = double.Parse(InNumb.text);
@@ -137,7 +137,7 @@ public class Calc : MonoBehaviour, IPointerDownHandler
         }            
     }
         
-    public void BDel() // кнопка удаления последней цифры 
+    public void ButtonDel() // при нажатии на кнопку Del. Удалет последнюю цифру из числа на экране(Backspace)
     {
         if (rVar.d != 0)
         {   
@@ -169,13 +169,13 @@ public class Calc : MonoBehaviour, IPointerDownHandler
         if (InNumb.text == "") InNumb.text = "0";
     }
         
-    public void BCE() // кнопка удаления числа на экране
+    public void ButtonCE() // при нажатии на кнопку CE. Присваевает переменной rVar.d значение 0, и выводит 0 на экран.(Очистка экрана)
     {   
         rVar.d = 0;
         InNumb.text = "0";
     }
         
-    public void BC() // кнопка очистки экрана и операндов
+    public void ButtonC() // при нажатии на кнопку C. Присваевает переменным rVar.a rVar.b rVar.d значение 0, и выводит 0 на экран.(Очищает экран и удаляет операнды)
     {   
         rVar.a = 0;
         rVar.b = 0;
@@ -184,7 +184,7 @@ public class Calc : MonoBehaviour, IPointerDownHandler
         InNumb.text = "0";
     }   
 
-    public void Dot()
+    public void ButtonDot() //при нажатие на кнопку точка(,). Ставить точку в числе если её еще нет
     {
         string s = ",";
         bool b = InNumb.text.Contains(s); // проверяет есть ли запятая в числе
@@ -202,7 +202,7 @@ public class Calc : MonoBehaviour, IPointerDownHandler
 
     
 
-    public void ClNum() // функция введения цифр
+    public void NumButtons() // при нажатие на кнопки 1 2 3 4 5 6 7 8 9 0
     {   
         
         int Leng = InNumb.text.Length; // измеряет длину строки
@@ -228,7 +228,7 @@ public class Calc : MonoBehaviour, IPointerDownHandler
         }                               
     }
 
-    public void ClAction () // функция записи операторов и операндов в переменные
+    public void ActionButtons () // при нажатии на кнопки + - * /
     {   
 
         
@@ -274,8 +274,8 @@ public class Calc : MonoBehaviour, IPointerDownHandler
         InNumb.text = rVar.d.ToString(); // выводит результат на экран   
     }   
 
-    public void Exit()
+    public void Exit() // закрыть приложение
     {
-        Application.Quit();    // закрыть приложение
+        Application.Quit();    
     } 
 }
